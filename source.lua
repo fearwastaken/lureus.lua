@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
       FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"lureus.lua", "thughunter22", "hateniggers"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      Key = {"lureus.lua", "thisisdakey"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
 
@@ -46,6 +46,40 @@ local UTG = UniTab:CreateButton({
    Name = "Trolling HUB",
    Callback = function()
        loadstring(game:HttpGet("https://pastebin.com/raw/vYERk4dC"))()
+   end,
+})
+
+local PLR = Window:CreateTab("LocalPlayer", 2795572803) -- Title, Image
+local PLAYER = PLR:CreateSection("LocalPlayer")
+
+local Slider = PLR:CreateSlider({
+	Name = "WalkSpeed",
+	Range = {16, 500},
+	Increment = 10,
+	Suffix = "WalkSpeed",
+	CurrentValue = 16,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(s)
+		game.Players.LocalPlayer.character.Humanoid.WalkSpeed = s
+	end,
+})
+
+local Slider2 = PLR:CreateSlider({
+	Name = "JumpPower",
+	Range = {50, 500},
+	Increment = 10,
+	Suffix = "Jumppower",
+	CurrentValue = 50,
+	Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(e)
+		game.Players.LocalPlayer.character.Humanoid.JumpPower = e
+	end,
+})
+
+local FlyButton = PLR:CreateButton({
+   Name = "Fly",
+   Callback = function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/fPtT2Q1F"))()
    end,
 })
 
