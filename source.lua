@@ -11,18 +11,18 @@ local Window = Rayfield:CreateWindow({
    },
    Discord = {
       Enabled = false,
-      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
-      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+      Invite = "noinvitelink", 
+      RememberJoins = true 
    },
-   KeySystem = true, -- Set this to true to use our key system
+   KeySystem = false,
    KeySettings = {
       Title = "Insert ur key",
       Subtitle = "Yes!!",
       Note = "Join the discord for the key",
-      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"lureus.lua", "thisisdakey"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      FileName = "Key", 
+      SaveKey = false, 
+      GrabKeyFromSite = false, 
+      Key = {"lureus.lua"} 
    }
 })
 
@@ -58,7 +58,7 @@ local Slider = PLR:CreateSlider({
 	Increment = 10,
 	Suffix = "WalkSpeed",
 	CurrentValue = 16,
-	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Flag = "Slider1", 
 	Callback = function(s)
 		game.Players.LocalPlayer.character.Humanoid.WalkSpeed = s
 	end,
@@ -70,7 +70,7 @@ local Slider2 = PLR:CreateSlider({
 	Increment = 10,
 	Suffix = "Jumppower",
 	CurrentValue = 50,
-	Flag = "Slider2", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Flag = "Slider2",
 	Callback = function(e)
 		game.Players.LocalPlayer.character.Humanoid.JumpPower = e
 	end,
