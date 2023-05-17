@@ -49,6 +49,35 @@ local UTG = UniTab:CreateButton({
    end,
 })
 
+local HARKED = UniTab:CreateButton({
+   Name = "Harked",
+   Callback = function()
+      setclipboard("https://pastebin.com/raw/MG0f9YsT")
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/fearwastaken/lureus.lua/main/harked"))()
+   end,
+})
+
+local BlockPistol = UniTab:CreateButton({
+   Name = "BlockPistol",
+   Callback = function()
+       loadstring(game:HttpGet(("https://pastebin.com/raw/Bju4We3f"), true))()
+   end,
+})
+
+local Saitama = UniTab:CreateButton({
+   Name = "Saitama",
+   Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/fearwastaken/lureus.lua/main/saitama"))()
+   end,
+})
+
+local Punch = UniTab:CreateButton({
+   Name = "Punch",
+   Callback = function()
+       loadstring(game:HttpGet("https://pastebin.com/raw/gNnLEbua"))()
+   end,
+})
+
 local PLR = Window:CreateTab("LocalPlayer", 2795572803) -- Title, Image
 local PLAYER = PLR:CreateSection("LocalPlayer")
 
@@ -76,6 +105,7 @@ local Slider2 = PLR:CreateSlider({
 	end,
 })
 
+
 local FlyButton = PLR:CreateButton({
    Name = "Fly",
    Callback = function()
@@ -83,4 +113,14 @@ local FlyButton = PLR:CreateButton({
    end,
 })
 
-Rayfield:LoadConfiguration() 
+local Settings = Rayfield:CreateTab("Settings")
+local SetSec = UniTab:CreateSection("Settings")
+
+local destroyui = Settings:CreateButton({
+    Name = "Destroy UI"
+    callback = function()
+      RayField:Destroy()
+    end,
+})
+
+Rayfield:LoadConfiguration()
