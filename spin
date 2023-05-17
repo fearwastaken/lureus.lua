@@ -1,4 +1,4 @@
-power = lol 
+power = 500
 game:GetService(‘RunService’).Stepped:connect(function()
 game.Players.LocalPlayer.Character.Head.CanCollide = false
 game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
