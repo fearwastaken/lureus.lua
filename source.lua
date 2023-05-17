@@ -113,14 +113,5 @@ local FlyButton = PLR:CreateButton({
    end,
 })
 
-local Settings = Rayfield:CreateTab("Settings")
-local SetSec = UniTab:CreateSection("Settings")
-
-local destroyui = Settings:CreateButton({
-    Name = "Destroy UI"
-    callback = function()
-      RayField:Destroy()
-    end,
-})
 
 Rayfield:LoadConfiguration()
