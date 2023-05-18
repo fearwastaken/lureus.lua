@@ -1,4 +1,3 @@
-
 local main = Instance.new("ScreenGui")
 local top = Instance.new("Frame")
 local back = Instance.new("Frame")
@@ -372,7 +371,7 @@ function getPlayer(list,speaker)
 end
 function Destroy(instance)
 	spawn(function()
-		game:GetService("ReplicatedStorage").DeleteCar:FireServer(instance)
+		game:GetService("ReplicatedStorage").DespawnBoat:FireServer(instance)
 	end)
 end
 
