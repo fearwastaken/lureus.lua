@@ -53,7 +53,7 @@ local HARKED = UniTab:CreateButton({
    Name = "Harked",
    Callback = function()
       setclipboard("https://pastebin.com/raw/MG0f9YsT")
-       loadstring(game:HttpGet("https://pastebin.com/raw/5zX8ktvR"))()
+       loadstring(game:HttpGet("https://pastebin.com/raw/5zX8ktvR", true))()
    end,
 })
 
